@@ -20,9 +20,11 @@
         </ul>
         </div>
         <div class="btns">
+            <a href="./shop.php">
         <button class="browse btn-header">
             Browse Products
         </button>
+</a>
         <!-- <button class="seller btn-header">
             Become a seller
         </button> -->

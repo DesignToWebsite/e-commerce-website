@@ -9,6 +9,16 @@ $active_page = '';
 ?>
 
 <?php if(isset($_SESSION['logger_user'])): ?>
+
+  <!-- get the user id -->
+<?php 
+foreach($users as $user){
+  if($user['name'] === $_SESSION['logger_user']){
+    $id_user = $user['id'];
+  }
+}
+?>
+
 <!-- update order ==> confirmed -->
 <?php 
 if(isset($_GET['id'])){
@@ -35,9 +45,22 @@ if(isset($_GET['id_delete'])){
     
 }
 
-
 ?>
+<!-- ajout d'un order -->
+<?php 
 
+if(isset($_GET['id_add'])){
+  //préparation
+$insert_order = $my_sql_client->prepare('INSERT INTO e_com.orders(user_id,product_id) VALUES(:user_id, :product_id)');
+
+//execution
+$insert_order->execute([
+    'user_id' => $id_user ,
+    'product_id' => $_GET["id_add"],
+])or die(print_r($my_sql_client->errorInfo()));
+
+}
+?>
 
 <?php
 //on récupére tous le contenu de la table
@@ -89,7 +112,7 @@ $orders = $orders_statement->fetchAll();
                   <?php echo (substr($product['name'], 0, 15))  ?>...
                   </h3>
                   <p class="price">
-                  <?php echo $product['price'] ?>
+                  $<?php echo $product['price'] ?>
                   </p>
                   <button class="submit btn_order"><a href="./shopping_card.php?id=<?php echo $order['id']?>">Confirm Order</a></button>
                   <button class="submit btn_order btn_delete"><a href="./shopping_card.php?id_delete=<?php echo $order['id']?>">Delete Order</a></button>

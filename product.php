@@ -55,7 +55,9 @@ $product = $product_statement->fetchAll();
         </div>
         <div>
           <p class="price">$<?php echo $product[0]['price']; ?></p>
-          <button class="dark">ADD TO CARD</button>
+          <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
+                            <button class="dark">ADD TO CARD</button>
+                            </a>
         </div>
       </div>
     </div>

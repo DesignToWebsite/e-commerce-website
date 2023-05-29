@@ -20,9 +20,11 @@ include_once("./c_variables.php");
                                 <?php echo substr($prod['name'], 0, 15) ?> ...
                             </h3>
                             <p class="price">
-                                <?php echo $prod['price'] ?>
+                                $<?php echo $prod['price'] ?>
                             </p>
+                            <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
                             <button class="btn-add">ADD TO CARD</button>
+                            </a>
                         </div>
                     </div>
 
@@ -48,9 +50,11 @@ include_once("./c_variables.php");
                                 <?php echo substr($prod['name'], 0, 15) ?> ...
                             </h3>
                             <p class="price">
-                                <?php echo $prod['price'] ?>
+                                $<?php echo $prod['price'] ?>
                             </p>
+                            <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
                             <button class="btn-add">ADD TO CARD</button>
+                            </a>
                         </div>
                     </div>
 
@@ -76,9 +80,11 @@ include_once("./c_variables.php");
                                 <?php echo substr($prod['name'], 0, 15) ?> ...
                             </h3>
                             <p class="price">
-                                <?php echo $prod['price'] ?>
+                                $<?php echo $prod['price'] ?>
                             </p>
+                            <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
                             <button class="btn-add">ADD TO CARD</button>
+                            </a>
                         </div>
                     </div>
 

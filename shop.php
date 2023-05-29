@@ -31,6 +31,18 @@ switch ($cat) {
 }
 ?>
 
+<?php 
+if(isset($_GET['email'])){
+  $insert_email = $my_sql_client->prepare('INSERT INTO e_com.join_email(email) VALUES(:email)');
+
+//execution
+$insert_email->execute([
+    'email' => $_GET['email'] ,
+])or die(print_r($my_sql_client->errorInfo()));
+
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -64,9 +76,9 @@ switch ($cat) {
             <?php echo substr($prod['name'],0,15)?> ...
             </h3>
             <p class="price">
-            <?php echo $prod['price'] ?>
+            $<?php echo $prod['price'] ?>
             </p>
-            <a href="./shopping_card.php">
+            <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
             <button class="btn-add">ADD TO CARD</button>
             </a>
             

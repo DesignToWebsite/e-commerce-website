@@ -7,7 +7,7 @@
           <p>
             Type your email down below and be Young wild generation
           </p>
-          <form>
+          <form action="./shop.php" methode="post">
             <input type="email" name="email" id="email" placeholder="Add your email here">
             <button class="send">SEND</button>
           </form>

@@ -992,4 +992,9 @@ footer .content .btns button {
 
 .shopping_card {
   min-height: 80vh;
+}
+
+.user {
+  display: flex;
+  background-color: darkblue;
 }/*# sourceMappingURL=main.css.map */
