@@ -4,6 +4,9 @@ $usersStatement = $my_sql_client->prepare('SELECT * FROM e_com.users');
 $usersStatement->execute();
 $users = $usersStatement->fetchAll();
 
+// print_r($users);
+
+
 $allProductsstatment = $my_sql_client->prepare('SELECT * FROM e_com.products');
 $allProductsstatment->execute();
 $allProducts = $allProductsstatment->fetchAll();

@@ -9,7 +9,7 @@ include_once("./c_variables.php");
     </div>
     <div class="owl-carousel">
         <?php foreach ($menProducts as $prod): ?>
-            <div>
+            <div  data-aos="fade-up" data-aos-duration="3000">
                 <a href="./product.php?id=<?php echo $prod['id'] ?>">
                     <div class="card card_prod">
                         <div class="img">
@@ -39,7 +39,7 @@ include_once("./c_variables.php");
     </div>
     <div class="owl-carousel">
         <?php foreach ($womenProducts as $prod): ?>
-            <div>
+            <div  data-aos="fade-up" data-aos-duration="3000">
                 <a href="./product.php?id=<?php echo $prod['id'] ?>">
                     <div class="card card_prod">
                         <div class="img">
@@ -69,7 +69,7 @@ include_once("./c_variables.php");
     </div>
     <div class="owl-carousel">
         <?php foreach ($jeweleryProducts as $prod): ?>
-            <div>
+            <div data-aos="fade-up" data-aos-duration="3000">
                 <a href="./product.php?id=<?php echo $prod['id'] ?>">
                     <div class="card card_prod">
                         <div class="img">

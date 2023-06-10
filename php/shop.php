@@ -64,28 +64,28 @@ $insert_email->execute([
 
   <div class="container">
     <div class="products_section">
-    <?php
-    foreach ($prods as $prod): ?>
-      <a href="./product.php?id=<?php echo $prod['id']?>">
-        <div class="card card_prod">
-          <div class="img">
-            <img src=<?php echo $prod['img']?> alt=<?php echo $prod['name']?> />
+      <?php
+      foreach ($prods as $prod): ?>
+        <a href="./product.php?id=<?php echo $prod['id']?>" >
+          <div class="card card_prod" data-aos="fade-up" data-aos-duration="3000">
+            <div class="img">
+              <img src=<?php echo $prod['img']?> alt=<?php echo $prod['name']?> />
+            </div>
+            <div class="description">
+              <h3>
+              <?php echo substr($prod['name'],0,15)?> ...
+              </h3>
+              <p class="price">
+              $<?php echo $prod['price'] ?>
+              </p>
+              <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
+              <button class="btn-add">ADD TO CARD</button>
+              </a>
+              
+            </div>
           </div>
-          <div class="description">
-            <h3>
-            <?php echo substr($prod['name'],0,15)?> ...
-            </h3>
-            <p class="price">
-            $<?php echo $prod['price'] ?>
-            </p>
-            <a href="./shopping_card.php?id_add=<?php echo $prod['id'] ?>">
-            <button class="btn-add">ADD TO CARD</button>
-            </a>
-            
-          </div>
-        </div>
-      </a>
-    <?php endforeach; ?>
+        </a>
+      <?php endforeach; ?>
     </div>
   </div>
 

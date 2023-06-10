@@ -683,6 +683,16 @@ footer .content .btns button {
 .products_section .card_prod {
   margin: 10px 20px 10px 0;
 }
+@media screen and (max-width: 768px) {
+  .products_section .card_prod {
+    margin: 10px auto !important;
+  }
+}
+@media screen and (max-width: 576px) {
+  .products_section .card_prod {
+    margin: 10px auto !important;
+  }
+}
 
 .product {
   display: grid;
