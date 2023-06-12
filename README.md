@@ -1,5 +1,6 @@
 # Buysellify E-Commerce Website
 This is an e-commerce website where users can sell products, add comments and ratings, and manage their orders. The website is built using HTML, CSS, JavaScript, PHP, and MySQL.
+Created by <a href="https://www.linkedin.com/in/safae-rabbouzi-b80621209/" target="_blank">Safae Rabbouzi</a> && <a href="https://www.linkedin.com/in/zineb-essoussi-5301581b6/" target="_blank">Zineb Essoussi </a>
 
 ## Video Demonstration
 
